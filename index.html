@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +65,9 @@
       color: white;
     }
 
-    /* NAVIGATION */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     .navbar {
       position: absolute;
@@ -129,7 +130,9 @@
       z-index: 22;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: 100svh;
@@ -140,9 +143,20 @@
       text-align: center;
       padding: 140px 20px 90px;
       overflow: hidden;
+
       background:
-        linear-gradient(180deg, rgba(0,0,0,.5), rgba(0,0,0,.35) 40%, #050505 100%),
-        linear-gradient(90deg, rgba(0,0,0,.45), rgba(0,0,0,.05), rgba(0,0,0,.45)),
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.5),
+          rgba(0,0,0,.35) 40%,
+          #050505 100%
+        ),
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.45),
+          rgba(0,0,0,.05),
+          rgba(0,0,0,.45)
+        ),
         url("hero.jpg") center/cover no-repeat,
         #101010;
     }
@@ -152,7 +166,12 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      background: radial-gradient(ellipse at center, transparent 10%, rgba(0,0,0,.5) 100%);
+      background:
+        radial-gradient(
+          ellipse at center,
+          transparent 10%,
+          rgba(0,0,0,.5) 100%
+        );
     }
 
     .hero-content {
@@ -162,11 +181,13 @@
       animation: heroIn 1.1s ease both;
     }
 
-    .hero-logo {
-      width: min(340px, 75vw);
-      margin: 0 auto 25px;
-      filter: drop-shadow(4px 0 var(--blue)) drop-shadow(-4px 0 var(--red));
-      animation: float 4s ease-in-out infinite;
+    .eyebrow {
+      font-size: .7rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #ccc;
+      margin-bottom: 22px;
     }
 
     .logo-text {
@@ -176,15 +197,6 @@
       line-height: .95;
       margin-bottom: 28px;
       text-shadow: 3px 0 var(--blue), -3px 0 var(--red);
-    }
-
-    .eyebrow {
-      font-size: .7rem;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #ccc;
-      margin-bottom: 22px;
     }
 
     .hero h1 {
@@ -228,7 +240,10 @@
       border: 1px solid var(--red);
       background: var(--red);
       color: white;
-      transition: transform .3s, background .3s, box-shadow .3s;
+      transition:
+        transform .3s,
+        background .3s,
+        box-shadow .3s;
     }
 
     .btn:hover {
@@ -278,7 +293,9 @@
       background: var(--red);
     }
 
-    /* TICKER */
+    /* =========================
+       TICKER
+    ========================= */
 
     .ticker {
       overflow: hidden;
@@ -312,7 +329,9 @@
       color: var(--red);
     }
 
-    /* GENERAL SECTIONS */
+    /* =========================
+       GENERAL
+    ========================= */
 
     .section {
       padding: 120px 9%;
@@ -341,7 +360,9 @@
       font-weight: 400;
     }
 
-    /* ABOUT */
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
       display: grid;
@@ -402,7 +423,9 @@
       margin-top: 30px;
     }
 
-    /* VALUES */
+    /* =========================
+       VALUES
+    ========================= */
 
     .values {
       padding: 0 9% 100px;
@@ -440,7 +463,9 @@
       line-height: 1.9;
     }
 
-    /* DROP */
+    /* =========================
+       DROP
+    ========================= */
 
     .drop-section {
       padding-top: 120px;
@@ -478,7 +503,10 @@
       background: var(--surface);
       border: 1px solid #1a1a1a;
       overflow: hidden;
-      transition: border-color .4s, transform .4s, box-shadow .4s;
+      transition:
+        border-color .4s,
+        transform .4s,
+        box-shadow .4s;
     }
 
     .card:hover {
@@ -591,15 +619,22 @@
       transform: translateX(6px);
     }
 
-    /* MANIFESTO */
+    /* =========================
+       MANIFESTO
+    ========================= */
 
     .manifesto {
       position: relative;
       padding: 150px 8%;
       overflow: hidden;
       text-align: center;
+
       background:
-        linear-gradient(115deg, rgba(0,91,255,.95), rgba(92,0,25,.92) 100%);
+        linear-gradient(
+          115deg,
+          rgba(0,91,255,.95),
+          rgba(92,0,25,.92) 100%
+        );
     }
 
     .manifesto::before {
@@ -642,7 +677,9 @@
       color: rgba(255,255,255,.8);
     }
 
-    /* CONTACT */
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
       text-align: center;
@@ -665,7 +702,9 @@
       margin: 5px;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 55px 7% 25px;
@@ -725,12 +764,16 @@
       letter-spacing: 1px;
     }
 
-    /* REVEAL ANIMATION */
+    /* =========================
+       REVEAL ANIMATION
+    ========================= */
 
     .reveal {
       opacity: 0;
       transform: translateY(35px);
-      transition: opacity .8s ease, transform .8s ease;
+      transition:
+        opacity .8s ease,
+        transform .8s ease;
     }
 
     .reveal.visible {
@@ -738,24 +781,38 @@
       transform: translateY(0);
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-9px); }
-    }
+    /* =========================
+       ANIMATIONS
+    ========================= */
 
     @keyframes ticker {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     @keyframes heroIn {
-      from { opacity: 0; transform: translateY(25px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    /* RESPONSIVE */
+    /* =========================
+       TABLET
+    ========================= */
 
     @media (max-width: 900px) {
+
       .navbar {
         padding: 22px 6%;
       }
@@ -769,12 +826,16 @@
         inset: 0;
         z-index: 21;
         background: rgba(5,5,5,.98);
+
         flex-direction: column;
         justify-content: center;
+
         gap: 35px;
+
         opacity: 0;
         visibility: hidden;
         transform: translateY(-15px);
+
         transition: .3s;
       }
 
@@ -786,10 +847,6 @@
 
       .nav-links a {
         font-size: 1rem;
-      }
-
-      .menu-toggle {
-        position: relative;
       }
 
       .about {
@@ -810,7 +867,12 @@
       }
     }
 
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 600px) {
+
       .navbar {
         padding: 20px 6%;
       }
@@ -946,8 +1008,15 @@
       }
     }
 
+    /* =========================
+       REDUCED MOTION
+    ========================= */
+
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
+
+      *,
+      *::before,
+      *::after {
         scroll-behavior: auto !important;
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
@@ -964,41 +1033,92 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-  <header class="navbar">
-    <a class="nav-logo" href="#home" aria-label="KINUMI home">KINUMI®</a>
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
-    <button class="menu-toggle" aria-label="Open navigation"
-      aria-expanded="false" aria-controls="nav-links">
+  <header class="navbar">
+
+    <a
+      class="nav-logo"
+      href="#home"
+      aria-label="KINUMI home"
+    >
+      KINUMI®
+    </a>
+
+    <button
+      class="menu-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="nav-links"
+    >
       ☰
     </button>
 
     <nav>
+
       <ul class="nav-links" id="nav-links">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">THE BRAND</a></li>
-        <li><a href="#drop">THE DROP</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-        <li><a class="nav-drop" href="#drop">EXPLORE DROP ↗</a></li>
+
+        <li>
+          <a href="#home">HOME</a>
+        </li>
+
+        <li>
+          <a href="#about">THE BRAND</a>
+        </li>
+
+        <li>
+          <a href="#drop">THE DROP</a>
+        </li>
+
+        <li>
+          <a href="#contact">CONTACT</a>
+        </li>
+
+        <li>
+          <a
+            class="nav-drop"
+            href="#drop"
+          >
+            EXPLORE DROP ↗
+          </a>
+        </li>
+
       </ul>
+
     </nav>
+
   </header>
 
+
   <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section
+      class="hero"
+      id="home"
+    >
+
       <div class="hero-content">
-        <!-- Optional: replace this text with your logo image -->
-        <!-- <img src="logo.png" alt="KINUMI" class="hero-logo"> -->
 
-        <div class="eyebrow">INDEPENDENT ARTWEAR / EST. 2026</div>
+        <div class="eyebrow">
+          INDEPENDENT ARTWEAR / EST. 2026
+        </div>
 
-        <div class="logo-text">KINUMI</div>
+        <div class="logo-text">
+          KINUMI
+        </div>
 
         <h1>
           PAINTED<br>
           BY HAND.<br>
-          <span class="red">WORN BY ONE.</span>
+          <span class="red">
+            WORN BY ONE.
+          </span>
         </h1>
 
         <p class="hero-description">
@@ -1007,137 +1127,303 @@
         </p>
 
         <div class="hero-actions">
-          <a href="#drop" class="btn">DISCOVER THE DROP ↗</a>
-          <a href="#about" class="btn btn-outline">OUR STORY</a>
+
+          <a
+            href="#drop"
+            class="btn"
+          >
+            DISCOVER THE DROP ↗
+          </a>
+
+          <a
+            href="#about"
+            class="btn btn-outline"
+          >
+            OUR STORY
+          </a>
+
         </div>
+
       </div>
 
-      <div class="hero-index">KINUMI® — DROP 001</div>
-      <div class="scroll-indicator">SCROLL TO EXPLORE</div>
+      <div class="hero-index">
+        KINUMI® — DROP 001
+      </div>
+
+      <div class="scroll-indicator">
+        SCROLL TO EXPLORE
+      </div>
+
     </section>
 
-    <!-- TICKER -->
-    <div class="ticker" aria-label="One of one, hand painted, no restock">
+
+    <!-- =========================
+         TICKER
+    ========================= -->
+
+    <div
+      class="ticker"
+      aria-label="One of one, hand painted, no restock"
+    >
+
       <div class="ticker-track">
-        <div class="ticker-content" aria-hidden="true">
-          <span>ONE OF ONE</span><span class="star">✳</span>
-          <span>KINUMI</span><span class="star">✳</span>
-          <span>HAND PAINTED</span><span class="star">✳</span>
-          <span>NO RESTOCK</span><span class="star">✳</span>
-          <span>SILENCE IS GOLD</span><span class="star">✳</span>
+
+        <div
+          class="ticker-content"
+          aria-hidden="true"
+        >
+
+          <span>ONE OF ONE</span>
+          <span class="star">✳</span>
+
+          <span>KINUMI</span>
+          <span class="star">✳</span>
+
+          <span>HAND PAINTED</span>
+          <span class="star">✳</span>
+
+          <span>NO RESTOCK</span>
+          <span class="star">✳</span>
+
+          <span>SILENCE IS GOLD</span>
+          <span class="star">✳</span>
+
         </div>
-        <div class="ticker-content" aria-hidden="true">
-          <span>ONE OF ONE</span><span class="star">✳</span>
-          <span>KINUMI</span><span class="star">✳</span>
-          <span>HAND PAINTED</span><span class="star">✳</span>
-          <span>NO RESTOCK</span><span class="star">✳</span>
-          <span>SILENCE IS GOLD</span><span class="star">✳</span>
+
+
+        <div
+          class="ticker-content"
+          aria-hidden="true"
+        >
+
+          <span>ONE OF ONE</span>
+          <span class="star">✳</span>
+
+          <span>KINUMI</span>
+          <span class="star">✳</span>
+
+          <span>HAND PAINTED</span>
+          <span class="star">✳</span>
+
+          <span>NO RESTOCK</span>
+          <span class="star">✳</span>
+
+          <span>SILENCE IS GOLD</span>
+          <span class="star">✳</span>
+
         </div>
+
       </div>
+
     </div>
 
-    <!-- ABOUT -->
-    <section class="section about" id="about">
+
+    <!-- =========================
+         ABOUT
+         FOTO 1 = jeans.jpg
+    ========================= -->
+
+    <section
+      class="section about"
+      id="about"
+    >
+
       <div class="about-image-wrap reveal">
+
         <img
-          src="jeans1.jpg"
+          src="jeans.jpg"
           alt="KINUMI hand-painted denim artwork"
           class="about-image"
           loading="lazy"
         >
+
       </div>
 
+
       <div class="about-content reveal">
-        <div class="section-label">01 / THE PHILOSOPHY</div>
+
+        <div class="section-label">
+          01 / THE PHILOSOPHY
+        </div>
+
         <h2 class="section-title">
           NOT FASHION.<br>
-          <span class="red">A STATEMENT.</span>
+          <span class="red">
+            A STATEMENT.
+          </span>
         </h2>
 
         <p class="section-copy">
+
           KINUMI creates one-of-one wearable artworks.
           Every denim piece is individually painted by hand.
           No templates. No copies. No mass production.
           Each piece exists once and only once.
+
         </p>
 
         <p class="section-copy">
+
           We believe that what you wear should mean something.
           Every brushstroke is intentional. Every imperfection
           is part of the artwork. No two pieces will ever be
           exactly alike.
+
         </p>
 
         <div class="about-note">
+
           THIS IS NOT ABOUT FOLLOWING TRENDS.<br>
           IT'S ABOUT CREATING SOMETHING THAT LASTS.
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- VALUES -->
+
+    <!-- =========================
+         VALUES
+    ========================= -->
+
     <section class="values">
+
       <div class="value reveal">
-        <div class="value-number">01</div>
-        <h3>ONE OF ONE</h3>
+
+        <div class="value-number">
+          01
+        </div>
+
+        <h3>
+          ONE OF ONE
+        </h3>
+
         <p>
           Every garment is an original artwork.
           Once it's gone, it's gone.
         </p>
+
       </div>
 
+
       <div class="value reveal">
-        <div class="value-number">02</div>
-        <h3>MADE BY HAND</h3>
+
+        <div class="value-number">
+          02
+        </div>
+
+        <h3>
+          MADE BY HAND
+        </h3>
+
         <p>
           Each piece is individually painted and
           carefully finished by hand.
         </p>
+
       </div>
 
+
       <div class="value reveal">
-        <div class="value-number">03</div>
-        <h3>NEVER REPEATED</h3>
+
+        <div class="value-number">
+          03
+        </div>
+
+        <h3>
+          NEVER REPEATED
+        </h3>
+
         <p>
           No mass production. No identical
           copies. No restocks.
         </p>
+
       </div>
+
     </section>
 
-    <!-- FIRST DROP -->
-    <section class="section drop-section" id="drop">
+
+    <!-- =========================
+         FIRST DROP
+    ========================= -->
+
+    <section
+      class="section drop-section"
+      id="drop"
+    >
+
       <div class="drop-header reveal">
+
         <div>
-          <div class="section-label">02 / THE COLLECTION</div>
-          <h2 class="section-title">THE FIRST <span class="red">DROP.</span></h2>
+
+          <div class="section-label">
+            02 / THE COLLECTION
+          </div>
+
+          <h2 class="section-title">
+            THE FIRST
+            <span class="red">
+              DROP.
+            </span>
+          </h2>
+
         </div>
 
+
         <p class="drop-subtitle">
+
           TWO PIECES.<br>
           ORIGINAL ARTWORK.<br>
           ONE CHANCE.
+
         </p>
+
       </div>
 
+
       <div class="drop-grid">
-        <!-- PRODUCT 1 -->
+
+        <!-- =========================
+             JEANS 1
+             FOTO = jeans1.jpg
+        ========================= -->
+
         <article class="card reveal">
+
           <div class="card-image-wrap">
-            <span class="card-number">KINUMI / 001</span>
+
+            <span class="card-number">
+              KINUMI / 001
+            </span>
+
             <img
               src="jeans1.jpg"
               alt="Drop 001 hand-painted denim"
               class="card-image"
               loading="lazy"
             >
-            <span class="card-status">ONE OF ONE</span>
+
+            <span class="card-status">
+              ONE OF ONE
+            </span>
+
           </div>
 
+
           <div class="card-content">
+
             <div class="card-topline">
-              <h3>DROP 001</h3>
-              <span class="card-edition">EDITION 1/1</span>
+
+              <h3>
+                DROP 001
+              </h3>
+
+              <span class="card-edition">
+                EDITION 1/1
+              </span>
+
             </div>
 
             <p>
@@ -1145,29 +1431,58 @@
               An original piece of wearable art.
             </p>
 
-            <a href="#contact" class="card-link">
-              ENQUIRE ABOUT THIS PIECE <span>↗</span>
+            <a
+              href="#contact"
+              class="card-link"
+            >
+              ENQUIRE ABOUT THIS PIECE
+              <span>↗</span>
             </a>
+
           </div>
+
         </article>
 
-        <!-- PRODUCT 2 -->
+
+        <!-- =========================
+             JEANS 2
+             FOTO = jeans2.jpg
+        ========================= -->
+
         <article class="card reveal">
+
           <div class="card-image-wrap">
-            <span class="card-number">KINUMI / 002</span>
+
+            <span class="card-number">
+              KINUMI / 002
+            </span>
+
             <img
               src="jeans2.jpg"
               alt="Silence Is Gold hand-painted denim"
               class="card-image"
               loading="lazy"
             >
-            <span class="card-status">ONE OF ONE</span>
+
+            <span class="card-status">
+              ONE OF ONE
+            </span>
+
           </div>
 
+
           <div class="card-content">
+
             <div class="card-topline">
-              <h3>SILENCE IS GOLD</h3>
-              <span class="card-edition">EDITION 1/1</span>
+
+              <h3>
+                SILENCE IS GOLD
+              </h3>
+
+              <span class="card-edition">
+                EDITION 1/1
+              </span>
+
             </div>
 
             <p>
@@ -1175,143 +1490,345 @@
               A statement made to stand alone.
             </p>
 
-            <a href="#contact" class="card-link">
-              ENQUIRE ABOUT THIS PIECE <span>↗</span>
+            <a
+              href="#contact"
+              class="card-link"
+            >
+              ENQUIRE ABOUT THIS PIECE
+              <span>↗</span>
             </a>
+
           </div>
+
         </article>
+
       </div>
+
     </section>
 
-    <!-- MANIFESTO -->
+
+    <!-- =========================
+         MANIFESTO
+    ========================= -->
+
     <section class="manifesto">
+
       <div class="manifesto-content reveal">
-        <div class="manifesto-label">03 / THE MANIFESTO</div>
+
+        <div class="manifesto-label">
+          03 / THE MANIFESTO
+        </div>
+
         <h2>
           LION<br>
           SHALL<br>
-          BE <span style="color:#050505">ONE.</span>
+          BE
+          <span style="color:#050505">
+            ONE.
+          </span>
         </h2>
+
         <p>
           Not made to blend in. Not made to be repeated.
           Made to stand for something. KINUMI is more
           than what you wear.
         </p>
+
       </div>
+
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="section-label">04 / GET IN TOUCH</div>
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section
+      class="contact"
+      id="contact"
+    >
+
+      <div class="section-label">
+        04 / GET IN TOUCH
+      </div>
+
       <h2 class="section-title reveal">
-        OWN A <span class="red">ONE OF ONE.</span>
+
+        OWN A
+        <span class="red">
+          ONE OF ONE.
+        </span>
+
       </h2>
 
       <p class="reveal">
+
         Interested in a piece, a collaboration,
         or simply want to know more about KINUMI?
         Get in touch.
+
       </p>
 
-      <!-- Replace the email address with your own -->
-      <a class="btn reveal" href="mailto:hello@kinumi.com">
+
+      <a
+        class="btn reveal"
+        href="mailto:hello@kinumi.com"
+      >
         CONTACT KINUMI ↗
       </a>
 
-      <!-- Replace # with your real Instagram URL -->
-      <a class="btn btn-outline reveal"
-         href="https://www.instagram.com/"
-         target="_blank"
-         rel="noopener noreferrer">
+
+      <a
+        class="btn btn-outline reveal"
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         INSTAGRAM ↗
       </a>
+
     </section>
+
   </main>
 
-  <!-- FOOTER -->
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
+
     <div class="footer-main">
+
       <div>
-        <a href="#home" class="footer-logo">KINUMI®</a>
-        <p class="footer-tagline">PAINTED BY HAND. WORN BY ONE.</p>
+
+        <a
+          href="#home"
+          class="footer-logo"
+        >
+          KINUMI®
+        </a>
+
+        <p class="footer-tagline">
+          PAINTED BY HAND. WORN BY ONE.
+        </p>
+
       </div>
 
+
       <ul class="footer-links">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">THE BRAND</a></li>
-        <li><a href="#drop">THE DROP</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+
         <li>
-          <a href="https://www.instagram.com/"
-             target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+          <a href="#home">
+            HOME
+          </a>
         </li>
+
+        <li>
+          <a href="#about">
+            THE BRAND
+          </a>
+        </li>
+
+        <li>
+          <a href="#drop">
+            THE DROP
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            CONTACT
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            INSTAGRAM ↗
+          </a>
+        </li>
+
       </ul>
+
     </div>
+
 
     <div class="footer-bottom">
-      <span>© 2026 KINUMI®. ALL RIGHTS RESERVED.</span>
-      <span>INDEPENDENT ARTWEAR / MADE TO BE UNIQUE.</span>
+
+      <span>
+        © 2026 KINUMI®. ALL RIGHTS RESERVED.
+      </span>
+
+      <span>
+        INDEPENDENT ARTWEAR / MADE TO BE UNIQUE.
+      </span>
+
     </div>
+
   </footer>
 
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
   <script>
-    // MOBILE NAVIGATION
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-    const navItems = document.querySelectorAll(".nav-links a");
+
+    /* MOBILE NAVIGATION */
+
+    const menuToggle =
+      document.querySelector(".menu-toggle");
+
+    const navLinks =
+      document.querySelector(".nav-links");
+
+    const navItems =
+      document.querySelectorAll(".nav-links a");
+
 
     function closeMenu() {
+
       navLinks.classList.remove("open");
+
       document.body.classList.remove("menu-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Open navigation");
-      menuToggle.textContent = "☰";
-    }
 
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
 
-      document.body.classList.toggle("menu-open", isOpen);
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
       menuToggle.setAttribute(
         "aria-label",
-        isOpen ? "Close navigation" : "Open navigation"
+        "Open navigation"
       );
-      menuToggle.textContent = isOpen ? "✕" : "☰";
-    });
+
+      menuToggle.textContent = "☰";
+
+    }
+
+
+    menuToggle.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          navLinks.classList.toggle("open");
+
+        document.body.classList.toggle(
+          "menu-open",
+          isOpen
+        );
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close navigation"
+            : "Open navigation"
+        );
+
+        menuToggle.textContent =
+          isOpen ? "✕" : "☰";
+
+      }
+    );
+
 
     navItems.forEach(link => {
-      link.addEventListener("click", closeMenu);
+
+      link.addEventListener(
+        "click",
+        closeMenu
+      );
+
     });
 
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape") closeMenu();
-    });
 
-    // REVEAL ELEMENTS ON SCROLL
-    const revealElements = document.querySelectorAll(".reveal");
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+
+      }
+    );
+
+
+    /* SCROLL REVEAL */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
 
     if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            obs.unobserve(entry.target);
+
+      const observer =
+        new IntersectionObserver(
+          (entries, obs) => {
+
+            entries.forEach(entry => {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+                obs.unobserve(
+                  entry.target
+                );
+
+              }
+
+            });
+
+          },
+          {
+            threshold: 0.12
           }
-        });
-      }, {
-        threshold: 0.12
-      });
+        );
 
-      revealElements.forEach(element => observer.observe(element));
+
+      revealElements.forEach(
+        element =>
+          observer.observe(element)
+      );
+
     } else {
-      revealElements.forEach(element => element.classList.add("visible"));
+
+      revealElements.forEach(
+        element =>
+          element.classList.add("visible")
+      );
+
     }
 
-    // FALLBACK FOR DISABLED JAVASCRIPT ANIMATIONS
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      revealElements.forEach(element => element.classList.add("visible"));
+
+    /* REDUCED MOTION */
+
+    if (
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches
+    ) {
+
+      revealElements.forEach(
+        element =>
+          element.classList.add("visible")
+      );
+
     }
+
   </script>
 
 </body>
